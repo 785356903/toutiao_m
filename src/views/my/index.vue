@@ -40,11 +40,33 @@
 
     <!-- 九宫格 收藏 历史 -->
     <van-grid clickable :column-num="2" class="grid-nav">
-      <van-grid-item to="/" class="grid-item">
+      <van-grid-item
+        :to="{
+          // 根据路由名称进行跳转
+          name: 'myCollectOrHistory',
+          // 传递路由动态参数
+          params: {
+            // 属性名：路由路径汇中设计的参数的名称
+            activeIndex: 0
+          }
+        }"
+        class="grid-item"
+      >
         <i slot="icon" class="toutiao toutiao-shoucang"></i>
         <span slot="text" class="text">收藏</span>
       </van-grid-item>
-      <van-grid-item to="/" class="grid-item">
+      <van-grid-item
+        :to="{
+          // 根据路由名称进行跳转
+          name: 'myCollectOrHistory',
+          // 传递路由动态参数
+          params: {
+            // 属性名：路由路径汇中设计的参数的名称
+            activeIndex: 1
+          }
+        }"
+        class="grid-item"
+      >
         <i slot="icon" class="toutiao toutiao-lishi"></i>
         <span slot="text" class="text">历史</span>
       </van-grid-item>

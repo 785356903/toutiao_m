@@ -28,10 +28,7 @@ export default {
   data () {
     return {}
   },
-  mounted () {
-    console.log(this.isCollected)
-    console.log(this.authorId)
-  },
+  mounted () {},
   methods: {
     async onCollect () {
       // 这里 loading 不仅仅是为了交互提示，更重要的是请求期间禁用背景点击功能，防止用户不断的操作界面发出请求

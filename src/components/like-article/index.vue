@@ -3,7 +3,8 @@
     :icon="isLike == 1 ? 'good-job' : 'good-job-o'"
     :class="{ active: isLike }"
     @click="onCollect"
-  />
+    >{{ likeCount }}</van-button
+  >
 </template>
 
 <script>
@@ -23,6 +24,10 @@ export default {
     articleId: {
       type: [Number, String],
       required: true
+    },
+    likeCount: {
+      type: [Number, String],
+      default: ''
     }
   },
   data () {

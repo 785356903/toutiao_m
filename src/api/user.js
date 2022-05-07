@@ -107,3 +107,25 @@ export const updateUserPhoto = (data) => {
     data
   })
 }
+
+/**
+ * 获取用户收藏列表
+ */
+export const collectionsList = (params) => {
+  return request({
+    method: 'GET',
+    url: '/v1_0/article/collections',
+    params
+  })
+}
+
+/**
+ * 获取用户阅读历史
+ */
+export const historiesList = (params) => {
+  return request({
+    method: 'GET',
+    url: '/v1_0/user/histories',
+    params
+  })
+}

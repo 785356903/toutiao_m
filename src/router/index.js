@@ -49,6 +49,13 @@ const routes = [
     component: () => import('@/views/author-user'),
     // 将路由动态参数映射到组件的 props 中，更推荐这种做法
     props: true
+  },
+  {
+    path: '/myCollectOrHistory/:activeIndex',
+    name: 'myCollectOrHistory',
+    component: () => import('@/views/myCollectOrHistory'),
+    // 将路由动态参数映射到组件的 props 中，更推荐这种做法
+    props: true
   }
 ]
 
